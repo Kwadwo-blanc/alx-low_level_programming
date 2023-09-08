@@ -7,8 +7,7 @@
  */
 int main(void)
 {
-	/* Use the puts function to print the string */
-	puts("Programming is like building a multilingual puzzle");
+	puts("Programming is like building a multilingual puzzle\n");
 
 	/* End the program with the value 0 */
 	return (0);
