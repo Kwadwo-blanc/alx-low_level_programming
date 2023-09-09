@@ -5,8 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Generates a random number and
- *              prints whether it's positive, zero, or negative.
+ * Description: To checkout numbers
  *
  * Return: Always 0 (Success)
  */
