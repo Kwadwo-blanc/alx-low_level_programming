@@ -18,9 +18,9 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	/* Shows the last digit of 'n' by using the absolute value with modulo 10. */
-	lastDigit = abs(n) % 10;
+	lastDigit = abs(n % 10); /*Ensure last digit is positive. */
 
-	printf("Last digit of %d is %d and is ", n, lastDigit);
+	printf("Last digit of %d is %d and is ", n, n < 0 ? -lastDigit : lastDigit);
 
 	/* Check the last digit conditions. */
 	if (lastDigit > 5)
