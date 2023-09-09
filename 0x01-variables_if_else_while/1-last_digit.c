@@ -12,12 +12,13 @@
 int main(void)
 {
 	int n;
+	int lastDigit; // Declare variables at the beginning of a function.
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
 	/* Shows the last digit of 'n' by using the absolute value with modulo 10. */
-	int lastDigit = abs(n) % 10;
+	lastDigit = abs(n) % 10;
 
 	printf("Last digit of %d is %d and is ", n, lastDigit);
 
