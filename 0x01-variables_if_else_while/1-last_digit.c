@@ -12,29 +12,24 @@
 int main(void)
 {
 	int n;
-	int lastDigit; /* Declare variables at the beginning of a function. */
+	int b;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
-	/* Shows the last digit of 'n' by using the absolute value with modulo 10. */
-	lastDigit = abs(n % 10); /*Ensure last digit is positive. */
-
-	printf("Last digit of %d is %d and is ", n, n < 0 ? -lastDigit : lastDigit);
-
-	/* Check the last digit conditions. */
-	if (lastDigit > 5)
+       	b = n % 10;
+	printf("Last digit of %d is %d ", n, b);
+	if (b > 5)
 	{
-		printf("greater than 5\n");
+		printf("and is greater than 5");
 	}
-	else if (lastDigit == 0)
+	if (b == 0)
 	{
-		printf("0\n");
+		printf("and is 0");
 	}
-	else
+	if (b < 6 && b != 0)
 	{
-		printf("less than 6 and not 0\n");
+		printf("and is less than 6 and not 0");
 	}
-
+        printf("\n");
 	return (0);
 }
