@@ -12,7 +12,7 @@
 int main(void)
 {
 	int n;
-	int lastDigit; // Declare variables at the beginning of a function.
+	int lastDigit; /* Declare variables at the beginning of a function. */
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
