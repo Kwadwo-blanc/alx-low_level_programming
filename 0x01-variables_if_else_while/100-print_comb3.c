@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-int num_left;
-int num_right;
-for (num_left = 48; num_right <= 78; num_left++)
+int number_left;
+int number_right;
+for (number_left = 48; number_right <= 78; number_left++)
 {
-for (num_right = num_left + 1 ; num_right <= 78; num_right++)
+for (number_right = number_left + 1 ; number_right <= 78; number_right++)
 {
-putchar(num_left);
-putchar (num_right);
-if ((num_left == 56) && (num_right == 78))
+putchar(number_left);
+putchar (number_right);
+if ((number_left == 56) && (number_right == 78))
 {
 break;
 }
