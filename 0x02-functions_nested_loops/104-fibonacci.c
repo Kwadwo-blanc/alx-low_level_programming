@@ -27,8 +27,8 @@ j = j / 1000;
 while (res <= 98)
 {
 carry = (b + c) / 1000;
-d = (b + c) - carry * 1000;
-k = (i + j) + carry;
+d = (b + c) -carry * 1000;
+k = (i + j) +carry;
 b = c;
 c = d;
 i = j;
