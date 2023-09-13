@@ -1,0 +1,1 @@
+This project is designed to help developers understand and practice debugging in C programming. It includes code examples with issues that need to be identified and fixed to produce the expected output.
