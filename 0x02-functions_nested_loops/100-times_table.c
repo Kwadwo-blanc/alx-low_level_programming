@@ -17,7 +17,7 @@ for (i = 0; i <= n; i++)
 {
 for (j = 0; j <= n; j++)
 {
-res = (i * j);
+k = (i * j);
 if (j != 0)
 {
 _putchar(',');
