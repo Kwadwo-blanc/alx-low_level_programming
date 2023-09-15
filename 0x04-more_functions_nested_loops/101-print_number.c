@@ -7,31 +7,19 @@
 
 void print_number(int n)
 {
-long len, res, i, temp, expo;
-
-res = n;
-expo = len =  1;
-/*Check negatives*/
-if (res < 0)
+unsigned int n2;
+if (n < 0)
 {
-res *= -1;
+n2 = -n;
 _putchar('-');
 }
-/**/
-temp = res;
-while (temp >= 10)
+else
 {
-len++;
-temp /= 10;
+n2 = n;
 }
-/*Create Exponent*/
-for (i = 1; i < len; i++)
-expo *= 10;
-/*Main */
-while (expo > 1)
+if (n2 / 10)
 {
-_putchar((res / expo) % 10 + '0');
-expo /= 10;
+print_number(n2 / 10);
 }
-_putchar(res % 10 + '0');
+_putchar((n2 % 10) + '0');
 }
