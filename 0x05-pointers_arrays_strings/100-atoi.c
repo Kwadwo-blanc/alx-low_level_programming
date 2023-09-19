@@ -3,7 +3,6 @@
 /**
  * _atoi - converts a string to an integer
  * @s: string to be converted
- *
  * Return: the int converted from the string
  */
 
@@ -18,15 +17,15 @@ int digit;
 i = 0;
 e = 0;
 n = 0;
-len = 0;
+longa = 0;
 f = 0;
 digit = 0;
-while (s[len] != '\0')
+while (s[longa] != '\0')
 longa++;
 while (i < longa && f == 0)
 {
 if (s[i] == '-')
-++d;
+++e;
 if (s[i] >= '0' && s[i] <= '9')
 {
 digit = s[i] - '0';
