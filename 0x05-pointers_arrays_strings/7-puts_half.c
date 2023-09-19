@@ -13,7 +13,7 @@ int b;
 int n;
 int longa;
 longa = 0;
-or '(b = 0; str[b] != '\0'; b++)'
+for (b = 0; str[b] != '\0'; b++)
 longa++;
 n = (longa / 2);
 if ((longa % 2) == 1)
