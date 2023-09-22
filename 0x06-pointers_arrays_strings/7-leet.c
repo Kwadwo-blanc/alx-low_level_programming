@@ -13,6 +13,7 @@ char leet_map[] = "aAeEoOtTlL";
 char leet_replacements[] = "4433077711";
 int i;
 int j;
+
 for (i = 0; str[i]; i++)
 {
 for (j = 0; leet_map[j]; j++)
