@@ -20,7 +20,6 @@ for (j = 0; leet_map[j]; j++)
 if (str[i] == leet_map[j])
 {
 str[i] = leet_replacements[j];
-break;
 }
 }
 }
