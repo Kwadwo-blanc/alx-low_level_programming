@@ -6,6 +6,7 @@
  * @b: Pointer to the buffer.
  * @size: Size of the buffer.
  */
+
 void print_buffer(char *b, int size)
 {
 int i;
@@ -16,9 +17,11 @@ if (size <= 0)
 printf("\n");
 return;
 }
+
 for (i = 0; i < size; i += 10)
 {
 printf("%08x: ", i);
+
 for (j = 0; j < 10; j++)
 {
 if (i + j < size)
@@ -28,6 +31,7 @@ printf("  ");
 if (j % 2 == 1)
 printf(" ");
 }
+
 for (j = 0; j < 10; j++)
 {
 if (i + j < size)
@@ -42,6 +46,7 @@ else
 printf(" ");
 }
 }
+
 printf("\n");
 }
 }
