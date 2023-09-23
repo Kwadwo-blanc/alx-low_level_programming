@@ -1,5 +1,27 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
+
+/**
+ * reverse_string - Reverse a string in-place.
+ * @str: The string to reverse.
+ */
+void reverse_string(char *str)
+{
+int length;
+int start;
+int end;
+length = strlen(str);
+start = 0;
+end = length - 1;
+while (start < end)
+{
+char temp = str[start];
+str[start] = str[end];
+str[end] = temp;
+start++;
+end--;
+}
+}
 
 /**
  * infinite_add - Add two numbers represented as strings.
@@ -10,14 +32,18 @@
  *
  * Return: A pointer to the result or 0 if the result cannot be stored.
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = strlen(n1);
-int len2 = strlen(n2);
-int carry = 0;
+int len1;
+int len2;
+int carry;
 int i;
 int j;
 int k;
+len1 = strlen(n1);
+len2 = strlen(n2);
+carry = 0;
 if (size_r <= len1 || size_r <= len2)
 return (0);
 i = j = k = 0;
