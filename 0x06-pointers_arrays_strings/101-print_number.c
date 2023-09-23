@@ -7,19 +7,43 @@
 
 void print_number(int n)
 {
-if (n == 0)
-{
-_putchar('0');
-return;
-}
-else if (n < 0)
+int i;
+int j;
+int digit;
+int dig;
+int pov;
+unsigned int tap;
+unsigned int numchar;
+unsigned int num;
+digit = 0;
+if (n < 0)
 {
 _putchar('-');
-n = -n;
+tap = -n;
 }
-if (n / 10 != 0)
+else
 {
-print_number(n / 10);
+tap = n;
 }
-_putchar((n % 10) + '0');
+num = tap;
+while (num >= 10)
+{
+num = num / 10;
+digit++;
+}
+dig = digit + 1;
+pov = 1;
+i = 1;
+while (i < dig)
+{
+pov = pov * 10;
+i++;
+}
+j = pov;
+while (j >= 1)
+{
+numchar = (tap / j) % 10;
+_putchar(numchar + '0');
+j = j / 10;
+}
 }
