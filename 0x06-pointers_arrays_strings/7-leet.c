@@ -9,10 +9,10 @@
 
 char *leet(char *str)
 {
-char leet_map[] = "aAeEoOtTlL";
-char leet_replacements[] = "4433077711";
 int i;
 int j;
+char leet_map[] = "aAeEoOtTlL";
+char leet_replacements[] = "4433007711";
 
 for (i = 0; str[i]; i++)
 {
