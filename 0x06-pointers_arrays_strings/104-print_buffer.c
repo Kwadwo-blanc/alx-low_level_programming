@@ -25,7 +25,7 @@ printf("%08x: ", i);
 for (j = 0; j < 10; j++)
 {
 if (i + j < size)
-printf("%02x", b[i + j]);
+printf("%02x", (unsigned char)b[i + j]);
 else
 printf("  ");
 if (j % 2 == 1)
