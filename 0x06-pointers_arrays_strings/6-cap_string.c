@@ -7,32 +7,39 @@
  * Return: true if the character is a separator, false otherwise.
  */
 
+int is_separator(char c)
+{
+char separators[] = " \t\n,;.!?\"(){}";
+int i;
+for (i = 0; separators[i]; i++)
+{
+if (c == separators[i])
+{
+return (1);
+}
+}
+return (0);
+}
+
+/**
+ * cap_string - Capitalize the first letter of each word in a string.
+ * @str: The input string.
+ *
+ * Return: A pointer to the modified string.
+ */
+
 char *cap_string(char *str)
 {
+int capitalize_next;
+capitalize_next = 1;
 int i;
-int j;
-int a[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-int i = 0;
-while (*(str + i) != '\0')
+for (i = 0; str[i]; i++)
 {
-if (*(str + i) >= 'a' && *(str + i) <= 'z')
+if (capitalize_next && str[i] >= 'a' && str[i] <= 'z')
 {
-if (i == 0)
-{
-*(str + i) = *(str + i) - 32;
+str[i] = str[i] - 'a' + 'A';
 }
-else
-{
-for (j = 0; j <= 12; j++)
-{
-if (a[j] == *(str + i - 1))
-{
-*(str + i) = *(str + i) - 32;
-}
-}
-}
-}
-i++;
+capitalize_next = is_separator(str[i]);
 }
 return (str);
 }
