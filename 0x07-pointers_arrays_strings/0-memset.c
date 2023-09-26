@@ -11,9 +11,11 @@
 char *_memcpy(char *s, char *b, unsigned int n)
 {
 unsigned int i;
-for (i = 0; i < n; i++)
+i = 0;
+while (i < n)
 {
 s[i] = b;
+i++
 }
 return (s);
 }
