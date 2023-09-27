@@ -15,9 +15,9 @@ unsigned int length;
 int found;
 int i;
 length = 0;
-found = 0;
 while (*s)
 {
+found = 0;
 for (i = 0; accept[i]; i++)
 {
 if (*s == accept[i])
