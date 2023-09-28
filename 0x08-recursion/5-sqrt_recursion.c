@@ -5,7 +5,7 @@
  * @n: The number to find the square root of.
  * @guess: The current guess for the square root.
  *
- * Return: Natural square root of n, or -1 if n doesn't have a natural square root.
+ * Return: Natural square root of n.
  */
 
 int sqrt_check(int n, int guess)
@@ -28,7 +28,7 @@ return (sqrt_check(n, guess + 1));
  * _sqrt_recursion - Returns the natural square root of a number recursively.
  * @n: The number to find the square root of.
  *
- * Return: The natural square root of n, or -1 if n does not have a natural square root.
+ * Return: Natural square root of n.
  */
 
 int _sqrt_recursion(int n)
