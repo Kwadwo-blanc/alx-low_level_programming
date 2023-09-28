@@ -28,7 +28,7 @@ return (1 + _strlen(s + 1));
 int is_palindrome_recursive(char *s, int start, int end)
 {
 if (start >= end)
-{    
+{
 return (1);
 }
 if (s[start] != s[end])
