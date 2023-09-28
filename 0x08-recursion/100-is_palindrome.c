@@ -31,9 +31,7 @@ return (is_palindrome_recursive(s, start + 1, end - 1));
 int is_palindrome(char *s)
 {
 int length;
-int i;
 length = 0;
-i = 0;
 while (s[length] != '\0')
 {
 length++;
