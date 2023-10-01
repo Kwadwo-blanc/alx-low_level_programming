@@ -1,47 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <ctype.h>
+#include <string.h>
 
 /**
- * main - Entry point of the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- *
- * Return: 0 if successful, 1 if there's an error
- */
-
-int main(int argc, char *argv[])
+*is_positive_number - Check if a string represents a positive number.
+*@s: The string to check.
+*
+*Return: 1 if it's a positive number, 0 otherwise.
+*/
+int is_positive_number(char *s)
 {
-int cents;
-int num_coins;
-int count;
-int coins[] = {25, 10, 5, 2, 1};
-int i;
-if (argc != 2)
+if (*s == '\0')
+return (0);
+while (*s)
 {
-printf("Error\n");
+if (*s < '0' || *s > '9')
+return (0);
+s++;
+}
 return (1);
 }
 
-cents = atoi(argv[1]);
+/**
+*main - Entry point
+*@argc: Number of command line arguments.
+*@argv: Array of command line arguments.
+*
+*Return: 0 on success, 1 on error.
+*/
 
-if (cents < 0)
+int main(int argc, char *argv[])
+{
+int sum;
+int j;
+sum = 0;
+if (argc == 1)
 {
 printf("0\n");
 return (0);
 }
-
-num_coins = sizeof(coins) / sizeof(coins[0]);
-count = 0;
-for (i = 0; i < num_coins; i++)
+for (j = 1; j < argc; j++)
 {
-while (cents >= coins[i])
+if (!is_positive_number(argv[j]))
 {
-cents -= coins[i];
-count++;
+printf("Error\n");
+return (1);
 }
+sum += atoi(argv[j]);
 }
-
-printf("%d\n", count);
+printf("%d\n", sum);
 return (0);
 }
+
