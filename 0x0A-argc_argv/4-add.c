@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
  * checker - checks for valid input
  * @argc: argument count
@@ -10,10 +11,11 @@
  * @argv: argument vector
  * Return: 0 on success, 1 on failure
  */
+
 int checker(int argc, int i, unsigned int l, char *argv[])
 {
 for (i = 1; i <= argc; i++)
-for (l = 0; argv[i] != '\0' && l < strlen(argv[i]); l++)
+for (l = 0; argv[i][l] != '\0' && l < strlen(argv[i]); l++)
 if (isdigit(argv[i][l]) == 0)
 return (1);
 return (0);
