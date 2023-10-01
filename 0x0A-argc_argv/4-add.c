@@ -1,23 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
-/**
- * checker - checks for valid input
- * @argc: argument count
- * @i: counter for argv[]
- * @l: counter for argv[][]
- * @argv: argument vector
- * Return: 0 on success, 1 on failure
- */
-int checker(int argc, int i, unsigned int l, char *argv[])
-{
-for (i = 1; i <= argc; i++)
-for (l = 0; argv[i] != '\0' && l < strlen(argv[i]); l++)
-if (isdigit(argv[i][l]) == 0)
-return (1);
-return (0);
-}
 
 /**
  * main - multiplies two numbers
@@ -29,15 +12,27 @@ return (0);
 
 int main(int argc, char *argv[])
 {
-int res, num1;
-res = 0;
-if (checker(argc, 1, 0, argv) ==1)
+int sum;
+sum = 0;
+if (argc == 1)
+{
+printf("0\n");
+return (0);
+}
+int i;
+for (i = 1; i < argc; i++)
+{
+int j;
+for (j = 0; argv[i][j] != '\0'; j++)
+{
+if (!isdigit(argv[i][j]))
 {
 printf("Error\n");
 return (1);
 }
-for (num1 = 1; num1 < argc; num1++)
-res += atoi(argv[num1]);
-printf("%d\n", res);
+}
+sum += atoi(argv[i]);
+}
+printf("%d\n", sum);
 return (0);
 }
