@@ -43,5 +43,7 @@ num -= coins[i];
 }
 
 printf("%d\n", res);
+{
 return (0);
+}
 }
