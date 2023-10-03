@@ -15,12 +15,12 @@ int r;
 r = 0;
 int m;
 m = 0;
-char *str;
+char *abc;
 if (ac == 0 || av == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j]; n++)
+for (j = 0; av[i][j]; j++)
 m++;
 }
 m += ac;
@@ -29,7 +29,7 @@ if (abc == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j]; n++)
+for (j = 0; av[i][j]; j++)
 {
 abc[r] = av[i][j];
 r++;
