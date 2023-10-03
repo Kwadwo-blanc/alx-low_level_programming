@@ -76,6 +76,6 @@ c = 0;
 else if (c++ == 0)
 start = i;
 }
-matrix[j] = NULL;
+matrix[j] = (NULL);
 return (matrix);
 }
