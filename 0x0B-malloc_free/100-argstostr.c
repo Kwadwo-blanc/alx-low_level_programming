@@ -15,7 +15,7 @@ int r;
 int l;
 l = 0;
 r = 0;
-char *str;
+char *mee;
 if (ac == 0 || av == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
@@ -24,20 +24,20 @@ for (j = 0; av[i][j]; j++)
 l++;
 }
 l += ac;
-str = malloc(sizeof(char) * l + 1);
-if (str == NULL)
+mee = malloc(sizeof(char) * l + 1);
+if (mee == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j]; j++)
 {
-str[r] = av[i][j];
+mee[r] = av[i][j];
 r++;
 }
-if (str[r] == '\0')
+if (mee[r] == '\0')
 {
-str[r++] = '\n';
+mee[r++] = '\n';
 }
 }
-return (str);
+return (mee);
 }
