@@ -2,48 +2,80 @@
 #include "main.h"
 
 /**
- * count_word - Helper function to count the number of words in a string.
- * @s: The input string.
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
  *
- * Return: The number of words.
+ * Return: number of words
  */
-int count_word(char *s);
-
+int count_word(char *s)
+{
+int flag;
+int c;
+int m;
+flag = 0;
+m = 0;
+for (c = 0; s[c] != '\0'; c++)
+{
+if (s[c] == ' ')
+flag = 0;
+else if (flag == 0)
+{
+flag = 1;
+m++;
+}
+}
+return (m);
+}
 /**
- * split_words - Helper function to split a string into words.
- * @str: The input string.
- * @words: An array to store the words.
+ * **strtow - splits a string into words
+ * @str: string to split
  *
- * Return: None.
- */
-void split_words(char *str, char **words);
-
-/**
- * strtow - Splits a string into words.
- * @str: The input string.
- *
- * Return: A pointer to an array of strings (words) or NULL on failure.
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
 
 char **strtow(char *str)
 {
-char **words;
-int word_count;
-if (str == NULL || *str == '\0')
+char **matrix, *tmp;
+int i;
+int j;
+int len;
+int words;
+int c;
+int start;
+int end;
+c = 0;
+j = 0;
+len = 0;
+while (*(str + len))
+len++;
+words = count_word(str);
+if (words == 0)
 return (NULL);
-word_count = count_word(str);
-if (word_count == 0)
+matrix = (char **) malloc(sizeof(char *) * (words + 1));
+if (matrix == NULL)
 return (NULL);
-words = (char **)malloc(sizeof(char *) * (word_count + 1));
-if (words == NULL)
-return (NULL);
-split_words(str, words);
-return (words);
-}
-int count_word(char *s)
+for (i = 0; i <= len; i++)
 {
-}
-void split_words(char *str, char **words)
+if (str[i] == ' ' || str[i] == '\0')
 {
+if (c)
+{
+end = i;
+tmp = (char *) malloc(sizeof(char) * (c + 1));
+if (tmp == NULL)
+return (NULL);
+while (start < end)
+*tmp++ = str[start++];
+*tmp = '\0';
+matrix[j] = tmp - c;
+j++;
+c = 0;
 }
-
+}
+else if (c++ == 0)
+start = i;
+}
+matrix[j] = NULL;
+return (matrix);
+}
