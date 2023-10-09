@@ -3,11 +3,12 @@
 
 /**
  * struct dog - a dog's basic info
- * @name: First member
- * @age: Second member
- * @owner: Third member
- *
+ * @name: Dogs name
+ * @age: Dogs age
+ * @owner: Dogs owner
  * Description: for all descriptions
+ *
+ * Return: return(0) Success
  */
 
 struct dog 
