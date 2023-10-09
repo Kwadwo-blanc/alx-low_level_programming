@@ -6,8 +6,8 @@
  * @d: A pointer to the dog_t struct to free.
  *
  * Description: function frees the memory allocated for a dog_t struct.
- * 
  */
+
 void free_dog(dog_t *d)
 {
 if (d == NULL)
