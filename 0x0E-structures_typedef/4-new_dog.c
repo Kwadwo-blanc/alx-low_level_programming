@@ -1,10 +1,10 @@
-#include <stddef.h>
 #include <stdlib.h>
 #include "dog.h"
 
 /**
  * _strlen - Returns the length of a string.
  * @s: String to evaluate.
+ * Description: strings
  *
  * Return: The length of the string.
  */
@@ -26,6 +26,7 @@ return (i);
  * to the buffer pointed to by dest.
  * @dest: Pointer to the buffer in which we copy the string.
  * @src: String to be copied.
+ * Description: concerning dog
  *
  * Return: The pointer to dest.
  */
@@ -51,6 +52,7 @@ return (dest);
  * @name: Name of the dog.
  * @age: Age of the dog.
  * @owner: Owner of the dog.
+ * Description: About the dog
  *
  * Return: Pointer to the new dog (Success), NULL otherwise.
  */
