@@ -18,4 +18,3 @@ if (d->owner != NULL)
 free(d->owner);
 free(d);
 }
-}
