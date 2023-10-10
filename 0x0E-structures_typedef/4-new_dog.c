@@ -15,9 +15,10 @@ char *ptr;
 if (str == NULL)
 return (NULL);
 men = 0;
-while (str[men] != '\0')
+while (str[men])
 men++;
-ptr = malloc((men + 1) * sizeof(char));
+men++;
+ptr = malloc(men * sizeof(char));
 if (ptr == NULL)
 return (NULL);
 for (i = 0; i < men; i++)
