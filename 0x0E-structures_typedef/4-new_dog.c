@@ -17,7 +17,7 @@ return (NULL);
 men = 0;
 while (str[men] != '\0')
 men++;
-ptr = malloc((men +1) *sizeof(char));
+ptr = malloc((men + 1) * sizeof(char));
 if (ptr == NULL)
 return (NULL);
 for (i = 0; i < men; i++)
