@@ -15,10 +15,9 @@ char *ptr;
 if (str == NULL)
 return (NULL);
 men = 0;
-while (str[men])
+while (str[men] != '\0')
 men++;
-men++;
-ptr = malloc(men *sizeof(char));
+ptr = malloc((men +1) *sizeof(char));
 if (ptr == NULL)
 return (NULL);
 for (i = 0; i < men; i++)
@@ -56,5 +55,7 @@ free(dog);
 return (NULL);
 }
 dog->age = age;
+{
 return (dog);
+}
 }
