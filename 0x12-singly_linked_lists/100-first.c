@@ -2,7 +2,7 @@
 
 void first(void) __attribute__ ((constructor));
 /**
- * print_message_before_main - Prints a message before function is executed.
+ * first - Prints a message before function is executed.
  */
 void first(void)
 {
