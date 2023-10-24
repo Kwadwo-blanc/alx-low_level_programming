@@ -31,5 +31,8 @@ size_t print_listint_safe(const listint_t *head);
 listint_t *reverse_listint(listint_t **head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
+void add_address(unsigned long int **visited, unsigned long int address);
+int check_address(unsigned long int *visited, unsigned long int address);
+size_t looped_listint_len(const listint_t *head);
 
 #endif /* LISTS_H */
