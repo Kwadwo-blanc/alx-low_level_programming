@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - Prints a listint_t linked list safely (avoiding loops)
+ * looped_listint_len - Counts the number of unique nodes
+ *                      in a looped listint_t linked list.
  * @head: Pointer to the head of the linked list
  *
  * Return: The number of nodes in the list
