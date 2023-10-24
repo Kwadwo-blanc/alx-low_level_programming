@@ -10,7 +10,6 @@ int pop_listint(listint_t **head)
 {
 int data;
 data = 0;
-    
 if (head != NULL && *head != NULL)
 {
 listint_t *temp = *head;
