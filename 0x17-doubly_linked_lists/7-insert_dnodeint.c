@@ -31,7 +31,7 @@ new_node->next = *h;
 if (*h != NULL)
 (*h)->prev = new_node;
 *h = new_node;
-return new_node;
+return (new_node);
 }
 
 temp = *h;
